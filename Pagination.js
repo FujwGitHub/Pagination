@@ -9,10 +9,10 @@ class Pagination {
     #total; // 总数据量 number
     #pageSize; // 每页条数 number
     #pageLen; // 页码数 number
-    #minPage = 6; // 最小页码 超过及出现··· number
+    #minPage = 6; // 最小页码 超过即出现··· number
     #prevPage; // 上一页 function
     #nextPage; // 下一页 function
-    #selectPage; // 选中页码
+    #selectPage; // 选中页码 function
     constructor({ el, total, pageSize, curPage, prevPage, nextPage, selectPage }) {
         if (typeof el !== 'string')  throw 'el传入的值应为id';
         // 初始化
@@ -44,7 +44,6 @@ class Pagination {
         }
         this.mainRender();
         this.#_setEvents();
-
     }
 
     /**
