@@ -1,0 +1,29 @@
+#pageNum {
+    display: inline-block;
+}
+
+#page .page-prev,
+#page .page-num,
+#page .page-next {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    margin-right: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #E6E6E6;
+}
+
+#pageNum .cur-page {
+    color: #fff;
+    background-color: #0077CB;
+}
+
+#page .page-prev:hover,
+#page .page-num:hover,
+#page .page-next:hover {
+    color: #fff;
+    background-color: #0077CB;
+}

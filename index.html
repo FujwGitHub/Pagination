@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination</title>
+    <link type="text/css" rel="stylesheet" href="./pagination.css" />
+</head>
+
+<body>
+    <div id="page"></div>
+    <script type="text/javascript" src="./Pagination.js"></script>
+    <script>
+        var test = function (curPage) {
+            console.log('这是一个测试...当前页为...', curPage);
+        }
+        const page = new Pagination({
+            el: 'page', // id
+            total: 100, // 总数据量
+            pageSize: 10, // 默认每页条数 默认10条
+            curPage: 1, // 当前页码
+            prevPage: test, // 上一页
+            nextPage: test, // 下一页
+            selectPage: test // 选择页码
+        })
+        window.page = page;
+    </script>
+</body>
+
+</html>
